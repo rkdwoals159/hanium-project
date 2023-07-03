@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-lg-12">
         <div class="row">
-          <div class="col-lg-3 col-md-6 col-12">
+          <!-- <div class="col-lg-3 col-md-6 col-12">
             <card
               :title="stats.money.title"
               :value="stats.money.value"
@@ -47,7 +47,7 @@
               :detail="stats.sales.detail"
               directionReverse
             ></card>
-          </div>
+          </div> -->
         </div>
         <div class="row">
           <div class="col-lg-7 mb-lg">
@@ -57,10 +57,10 @@
             </div>
           </div>
           <div class="col-lg-5">
-            <carousel />
+            <!-- <carousel /> -->
           </div>
         </div>
-        <div class="row mt-4">
+        <!-- <div class="row mt-4">
           <div class="col-lg-7 mb-lg-0 mb-4">
             <div class="card">
               <div class="p-3 pb-0 card-header">
@@ -110,16 +110,19 @@
           <div class="col-lg-5">
             <categories-card />
           </div>
-        </div>
+        </div> -->
+       <ModalComponent></ModalComponent>
       </div>
     </div>
   </div>
 </template>
 <script>
-import Card from "@/examples/Cards/Card.vue";
+// import Card from "@/examples/Cards/Card.vue";
 import GradientLineChart from "@/examples/Charts/GradientLineChart.vue";
-import Carousel from "./components/Carousel.vue";
-import CategoriesCard from "./components/CategoriesCard.vue";
+import ModalComponent from '@/views/components/Modal.vue';
+
+// import Carousel from "./components/Carousel.vue";
+// import CategoriesCard from "./components/CategoriesCard.vue";
 
 import US from "@/assets/img/icons/flags/US.png";
 import DE from "@/assets/img/icons/flags/DE.png";
@@ -130,6 +133,7 @@ export default {
   name: "dashboard-default",
   data() {
     return {
+      modals : false,
       stats: {
         money: {
           title: "Today's Money",
@@ -198,10 +202,11 @@ export default {
     };
   },
   components: {
-    Card,
+    // Card,
     GradientLineChart,
-    Carousel,
-    CategoriesCard,
+    ModalComponent,
+    // Carousel,
+    // CategoriesCard,
   },
 };
 </script>
